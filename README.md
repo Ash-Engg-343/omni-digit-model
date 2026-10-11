@@ -28,8 +28,7 @@ Trained for 5 epochs with the Adam optimizer on the MNIST training set, evaluate
 
 Word recognition is near-perfect because the word task is a lookup over ten fixed inputs, so it is easy by design. The word → image → recognized score is the more meaningful result: it shows that images generated from words are recognized by the image path as the correct digit, which means the two paths share a representation.
 
-![Generated digits from words](outputs/generated_from_words.png)
-
+![Generated digits from words](images/generated_from_words.png)
 ## Limitations
 
 - Digits only: ten classes, no open vocabulary.
@@ -45,11 +44,11 @@ Word recognition is near-perfect because the word task is a lookup over ten fixe
 - Replace the small convolutional decoder with a stronger generator and train for longer.
 - Compare the shared model against separate single-modality models to measure whether sharing helps.
 
-## How to run
+   ## How to run
 
 ```
-pip install torch torchvision matplotlib
-python main.py
+   pip install torch torchvision matplotlib
+   python main.py
 ```
 
 The first run downloads MNIST into `data/`. Outputs are saved to `outputs/`: the trained model (`model.pt`) and the generated image grid.
