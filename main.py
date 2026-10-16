@@ -124,3 +124,5 @@ print(f"\nImage recognition accuracy (test set): {img_acc:.3f}")
 print(f"Word recognition accuracy:             {text_acc:.3f}")
 print(f"Word -> image -> recognized accuracy:  {cycle_acc:.3f}")
 print("Saved outputs/generated_from_words.png and outputs/model.pt")
+
+print("\nDigit words:", WORDS_ACTIVE)
