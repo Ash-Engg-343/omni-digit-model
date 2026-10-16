@@ -10,7 +10,12 @@ from torchvision.utils import save_image
 
 torch.manual_seed(0)
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+LANGUAGE = "ta"  # "en" or "ta"
+WORDS = {
+    "en": ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
+    "ta": ["பூஜ்யம்", "ஒன்று", "இரண்டு", "மூன்று", "நான்கு", "ஐந்து", "ஆறு", "ஏழு", "எட்டு", "ஒன்பது"],
+}
+WORDS_ACTIVE = WORDS[LANGUAGE]
 D = 64              # size of the shared vector
 EPOCHS = 5
 BATCH = 128
